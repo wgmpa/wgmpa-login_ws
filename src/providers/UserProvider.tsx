@@ -63,15 +63,11 @@ const UserProvider: React.FC<IUserProps> = ({ children }) => {
 
   const loginUser = async (formData: { email: string; password: string }) => {
     try {
-      console.log("Iniciando autenticação...");
       const { data } = await getApi.post("/login", formData);
       localStorage.setItem("@TOKEN", data.accessToken);
       localStorage.setItem("@USERID", data.user.id);
-      console.log("meio da autenticação...");
       setUsers(data);
-      console.log("chegou no redirecionamento...");
       navigate("/dashboards");
-      console.log("fim do redirecionamento...");
     } catch (error) {
       toast.error("Email ou senha incorretos");
       throw new Error(`Error ${error}`);

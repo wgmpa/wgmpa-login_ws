@@ -59,12 +59,9 @@ const PostProviders: React.FC<IPropsPost> = ({ children }) => {
     category: string;
     title: string;
   }) => {
-    console.log(postData);
-
     try {
       const newPost = { ...postData, author: user?.name };
       const token = localStorage.getItem("@TOKEN");
-      console.log(token);
       const { data } = await getApi.post("/news", newPost, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -73,8 +70,7 @@ const PostProviders: React.FC<IPropsPost> = ({ children }) => {
       setPostList([...postList, data]);
       navigate("/dashboards");
     } catch (error) {
-      console.log("falhou");
-      console.log(error);
+      throw new Error(`Erro em ${error}`);
     }
   };
 
@@ -101,7 +97,7 @@ const PostProviders: React.FC<IPropsPost> = ({ children }) => {
       setPostList(newPostList);
       navigate("/dashboards");
     } catch (error) {
-      console.log(error);
+      throw new Error(`Erro em ${error}`);
     }
   };
 
@@ -114,7 +110,7 @@ const PostProviders: React.FC<IPropsPost> = ({ children }) => {
       const newsPostList = postList.filter((post) => post.id !== id);
       setPostList(newsPostList);
     } catch (error) {
-      console.log(error);
+      throw new Error(`Erro em ${error}`);
     }
   };
 
