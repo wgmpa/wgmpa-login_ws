@@ -1,0 +1,106 @@
+.container {
+    width: 100%;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 1fr;
+}
+
+.container button {
+    border: 1px;
+    width: 100px;
+    padding: 5px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0.5px 0px 0px 0.5px;
+}
+
+.container button:hover {
+    opacity: 0.5;
+    background: linear-gradient(#cec8c8, #152e3f);
+}
+
+.container_dashboard {
+    gap: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container_cardlist {
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+    overflow: hidden;
+    max-height: 650px;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+.container_modal {
+    gap: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: start;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.conatiner_card h3 {
+    height: 70px;
+}
+
+.conatiner_card h3:hover {
+    transition: 1s ease-in-out;
+    -webkit-line-clamp: 3;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    display: none;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 575px) {
+    .container_dashboard {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container_cardlist {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    .container_dashboard {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .container_cardlist {
+        gap: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        overflow-x: scroll;
+        min-width: 400px;
+    }
+
+
+}

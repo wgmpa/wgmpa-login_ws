@@ -1,0 +1,12 @@
+.container_footer {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    background-color: black;
+    color: bisque;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
+
+}

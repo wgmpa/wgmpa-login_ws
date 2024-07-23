@@ -1,0 +1,28 @@
+.container_login {
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container_form {
+    gap: 12px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_form button {
+    width: 150px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+}
+
+.register a {
+    color: #f5f5f5;
+    font-weight: 700;
+}

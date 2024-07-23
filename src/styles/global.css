@@ -1,0 +1,41 @@
+:root {
+    --bg-color-one: linear-gradient(#cec8c8, #152e3f);
+
+    --primary-color: #FFFFFF;
+    --secondary-color: #ff000050;
+    --tertiary-color: #FAEBD7;
+    --quaternary-color: #111111;
+
+    --color-header-text: #ffe4c4;
+    --color-header-bg: #111111;
+
+    --font-size-header: 1.2rem;
+}
+
+body {
+    /* color: var(--tertiary-color); */
+    /* font-family: 'Inter', sans-serif; */
+    background-color: var(--bg-color-one);
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--bg-color-one);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color-one);
+    border-radius: 20px;
+    border: 3px solid var(--secondary-color);
+}
+
+body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: var(--bg-color-one);
+
+}

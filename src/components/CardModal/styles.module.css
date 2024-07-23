@@ -1,0 +1,22 @@
+.info {
+    gap: 10px;
+    display: flex;
+    align-items: start;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.conatiner_card h3 {
+    margin-bottom: 20px;
+}
+
+.conatiner_card button {
+    border: none;
+    margin-right: 10px;
+}
+
+.info :nth-child(3) {
+    width: 90%;
+
+}
